@@ -1,0 +1,14 @@
+&i2c1 {
+    status = "okay";
+    ssd1306@3c {
+        compatible = "solomon,ssd1306fb";
+        reg = <0x3C>;
+        width = <128>;
+        height = <32>;
+        label = "OLED";
+        segment-offset = <0>;
+        page-offset = <0>;
+        display-offset = <0>;
+        reset-gpios = <&gpio0 10 GPIO_ACTIVE_LOW>;  // Adjust to your board
+    };
+};
