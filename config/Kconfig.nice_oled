@@ -1,0 +1,3 @@
+config CUSTOM_WIDGET_NICE_OLED
+    bool "Enable custom Nice OLED widget"
+    default y
