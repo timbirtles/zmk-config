@@ -1,7 +1,0 @@
-/ {
-    compatible = "zmk,shield";
-
-    chosen {
-        zmk,encoder = &encoder0;
-    };
-};
