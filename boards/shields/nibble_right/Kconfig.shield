@@ -1,0 +1,2 @@
+config SHIELD_NIBBLE_RIGHT
+    def_bool $(shields_list_contains,nibble_right)
