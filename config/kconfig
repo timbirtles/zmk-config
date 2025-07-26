@@ -1,1 +1,2 @@
 rsource "../boards/shields/nice_oled/Kconfig.defconfig"
+rsource "../zmk-nice-oled/Kconfig.nice_oled"
