@@ -64,7 +64,9 @@ static void draw_canvas(lv_obj_t *widget, lv_color_t cbuf[], const struct status
     draw_background(canvas);
     draw_output_status(canvas, state);
     draw_battery_status(canvas, state);
+    #if IS_ENABLED(CONFIG_NICE_OLED_WIDGET_WPM)
     draw_wpm_status(canvas, state);
+    #endif
     draw_profile_status(canvas, state);
     draw_layer_status(canvas, state);
 
@@ -218,9 +220,10 @@ int zmk_widget_screen_init(struct zmk_widget_screen *widget, lv_obj_t *parent) {
     widget_battery_status_init();
     widget_layer_status_init();
     widget_output_status_init();
-    widget_wpm_status_init();
+   
 
 #if IS_ENABLED(CONFIG_NICE_OLED_WIDGET_WPM)
+    widget_wpm_status_init();
     zmk_widget_luna_init(&luna_widget, canvas);
     lv_obj_align(zmk_widget_luna_obj(&luna_widget), LV_ALIGN_TOP_LEFT, 36, 0);
 #endif
